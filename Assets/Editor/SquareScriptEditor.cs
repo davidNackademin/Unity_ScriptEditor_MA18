@@ -13,7 +13,7 @@ public class SquareScriptEditor : Editor
 
         ClickSquareController clickSquare = (ClickSquareController) target;
 
-        EditorGUILayout.LabelField("Points", clickSquare.points.ToString());
+        EditorGUILayout.LabelField("Level", clickSquare.Level.ToString());
 
     }
 

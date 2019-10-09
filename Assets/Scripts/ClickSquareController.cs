@@ -6,8 +6,11 @@ using UnityEngine;
 public class ClickSquareController : MonoBehaviour
 {
 
-    [HideInInspector]
     public int points = 0;
+
+	public int Level {
+		get { return points / 7; }
+	}
 
     public List<Color> colors;
 
@@ -17,9 +20,20 @@ public class ClickSquareController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
-        SetRandomColor();
+		Init();
     }
+
+ //   void Reset()
+	//{
+	//	Init();
+	//	Debug.Log("test");
+	//}
+
+    void Init()
+	{
+		spriteRenderer = GetComponent<SpriteRenderer>();
+		SetRandomColor();
+	}
 
 
     private void OnMouseDown()
